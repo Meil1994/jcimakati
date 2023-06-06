@@ -7,6 +7,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\MembershipController;
+use App\Http\Controllers\ClickGreenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,12 @@ Route::get('/membership', [MembershipController::class, 'memberships']);
 Route::post('/membership/send', [MembershipController::class, 'postMembership']);
 
 Route::get('/contact_us', [ContactUsController::class, 'contactUs']);
+
 Route::post('/contact_us/send', [ContactUsController::class, 'postContactUs']);
+
+// CLICK GREEN
+Route::get('/member', [ClickGreenController::class, 'cg_member']);
+
+Route::get('/about', [ClickGreenController::class, 'cg_about']);
+
+Route::get('/login', [ClickGreenController::class, 'cg_login']);
