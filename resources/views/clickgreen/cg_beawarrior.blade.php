@@ -9,7 +9,7 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/8f74335642.js" crossorigin="anonymous"></script>
     @include('components.Links')
-    <link rel="stylesheet" href="{{ asset('assets/css/clickgreen.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/assets/css/clickgreen.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
@@ -57,15 +57,15 @@
             </div>
         </section>
         <section class="d-flex align-items-center justify-content-center"
-            style="height:100%; background-image: url('images/cglogobg.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: center;">
+            style="height:100%; background-image: url('{{ asset('public/images/cglogobg.jpg') }}'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: center;">
             <div class="container-sm py-5 ">
                 <div class="d-flex flex-column mx-lg-5 mx-sm-0">
                     <h2 class="fs-1 text-light text-center mb-5">ARTICLES</h2>
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div class="col">
                             <div class="card border-0 h-100">
-                                <img src="./images/upevent6.jpg" style="max-height:350px" class="card-img-top img-fluid"
-                                    alt="...">
+                                <img src="{{ asset('public/images/upevent6.jpg') }}" style="max-height:350px"
+                                    class="card-img-top img-fluid" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">This is a longer card with supporting text below as a natural
@@ -75,8 +75,8 @@
                         </div>
                         <div class="col">
                             <div class="card border-0 h-100">
-                                <img src="./images/upevent7.jpg" style="max-height:350px" class="card-img-top img-fluid"
-                                    alt="...">
+                                <img src="{{ asset('public/images/upevent7.jpg') }}" style="max-height:350px"
+                                    class="card-img-top img-fluid" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">This is a short card.</p>
@@ -85,8 +85,8 @@
                         </div>
                         <div class="col">
                             <div class="card border-0 h-100">
-                                <img src="./images/upevent9.jpg" style="max-height:350px" class="card-img-top img-fluid"
-                                    alt="...">
+                                <img src="{{ asset('public/images/upevent9.jpg') }}" style="max-height:350px"
+                                    class="card-img-top img-fluid" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">This is a longer card with supporting text below as a natural
@@ -155,7 +155,8 @@
         <div class="container-sm">
             <h2 class="slogan text-center mb-lg-5 mb-sm-3"
                 style="font-family: 'Dancing Script', cursive; font-weight:bold;">
-                Together let's <img class="slogan-logo" src="./images/cglogo.png" width="200px" alt=""> for
+                Together let's <img class="slogan-logo" src="{{ asset('/images/cglogo.png') }}" width="200px"
+                    alt=""> for
                 a brighter future.
             </h2>
         </div>

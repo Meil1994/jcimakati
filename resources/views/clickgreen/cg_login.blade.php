@@ -19,7 +19,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-image: url('./images/tree_planting.jpg');
+            background-image: url('{{ asset('public/images/tree_planting.jpg') }}');
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -116,7 +116,7 @@
 <body>
     <div class="login-form mx-3">
         <div class="">
-            <img src="./images/cglogo.png" class="mx-auto d-block" width="150px" alt="">
+            <img src="{{ asset('public/images/cglogo.png') }}" class="mx-auto d-block" width="150px" alt="">
         </div>
         <h4 class="text-light mb-3">LOGIN</h4>
         <form>

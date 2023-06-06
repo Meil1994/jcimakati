@@ -1,7 +1,7 @@
 <nav class="nav-custom navbar navbar-expand-lg sticky-top">
     <div class="container-md">
-        <a class="navbar-brand centered-logo" href="#">
-            <img src="./images/jcilogo.png" width="140px" alt="">
+        <a class="navbar-brand centered-logo" href="{{ asset('/') }}">
+            <img src="{{ asset('public/images/jcilogo.png') }}" width="140px" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDarkNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

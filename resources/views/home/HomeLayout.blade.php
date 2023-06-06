@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JCI MAKATI</title>
+    <link rel="icon" type="image/png" sizes="32x24" href="{{ asset('public/images/jcilogo.png') }}">
     @include('components.Links')
-    <link rel="stylesheet" href="{{ asset('./assets/css/landing-page.css') }}">
-    <link rel="shortcut icon" type="image/png" href="{{ asset('./images/jci-3.png') }}">
+    <link rel="stylesheet" href="{{ asset('public/assets/css/landing-page.css') }}">
 
     <style>
         .background {
-            background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url('./images/hero2.png');
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url({{ asset('public/images/hero2.png') }});
             min-height: 100vh;
             background-size: cover;
             background-position: center;
@@ -130,88 +130,17 @@
 
 <body>
     <!-- Navbar -->
-    <section>
-        <div class="site-mobile-menu site-navbar-target">
-            <div class="site-mobile-menu-header">
-                <div class="site-mobile-menu-close mt-3">
-                    <span class="icon-close2 js-menu-toggle"></span>
-                </div>
-            </div>
-            <div class="site-mobile-menu-body"></div>
-        </div> <!-- .site-mobile-menu -->
-
-        <div class="site-navbar-wrap">
-            <div class="site-navbar-top">
-                <div class="container py-3">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <div class="d-flex mr-auto">
-                                <a href="#" class="d-flex align-items-center mr-4">
-
-                                </a>
-                                <a href="#" class="d-flex align-items-center mr-auto">
-                                    <!-- <span class="icon-phone mr-2"></span>
-                  <span class="d-none d-md-inline-block">+1 234 4567 8910</span> -->
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="social">
-                                <a href="#" class="p-2 pl-0"><span class="icon-twitter"></span></a>
-                                <a href="#" class="p-2 pl-0"><span class="icon-facebook"></span></a>
-                                <a href="#" class="p-2 pl-0"><span class="icon-linkedin"></span></a>
-                                <a href="#" class="p-2 pl-0"><span class="icon-instagram"></span></a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="site-navbar site-navbar-target js-sticky-header">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-2">
-                            <img class="logo my-0 site-logo mt-3" src="./images/jci-3.png" alt="">
-                            <!-- <h1 class="my-0 site-logo"><a href="index.html">JCI MAKATI</a></h1> -->
-                        </div>
-                        <div class="col-10">
-                            <nav class="site-navigation text-right" role="navigation">
-                                <div class="container">
-                                    <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
-                                            class="site-menu-toggle js-menu-toggle text-white"><span
-                                                class="icon-menu h3"></span></a></div>
-                                    <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
-                                        <li><a href="/" class="nav-link active">Home</a></li>
-                                        <li class="has-children"><a href="/about_us" class="nav-link">About Us</a>
-                                            <ul class="dropdown arrow-top">
-                                                <li><a href="#" class="nav-link">History</a></li>
-                                                <li><a href="jci_ph.php" class="nav-link">JCI Philippines</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="/events" class="nav-link">Events</a></li>
-                                        <li><a href="/programs" class="nav-link">Programs</a></li>
-                                        <li><a href="/membership" class="nav-link">Memberships</a></li>
-                                        <li><a href="/contact_us" class="nav-link">Contact Us</a></li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('components.home_navbar')
 
     <div class="background"></div>
 
     <!-- logo -->
 
     <!-- carousel text -->
-    <section class="shadow">
+    {{-- <section class="shadow">
         <section class="reveal fade-bottom">
             <div class="d-flex justify-content-center mt-2">
-                <img class="w-25" src="./images/jcilogo.png" alt="">
+                <img class="w-25" src="{{ asset('public/images/jcilogo.png') }}" alt="">
             </div>
         </section>
         <div class="container reveal fade-right">
@@ -232,23 +161,24 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Advocacies -->
-    <section class="reveal fade-bottom"
-        style="background-image: url('./images/cglogobg.jpg'); background-repeat:no-repeat; background-size:100%;">
+    {{-- <section class="reveal fade-bottom"
+        style="background-image: url({{ asset('public/images/cglogobg.jpg') }}); background-repeat:no-repeat; background-size:100%;">
         <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <img src="./images/cglogo.png" class="img-fluid w-75 center cglogo reveal fade-left" alt="cglogo">
+            <img src="{{ asset('public/images/cglogo.png') }}" class="img-fluid w-75 center cglogo reveal fade-left"
+                alt="cglogo">
         </a>
-    </section>
+    </section> --}}
 
     {{-- About --}}
-    <section>
+    {{-- <section>
         <div class="container-fluid">
             <div class="row d-flex align-items-center">
                 <div class="col-md-6 col-sm-6 px-0">
-                    <img src="./images/about_jci.png" width="750px" height="550px" class="img-fluid"
-                        alt="" />
+                    <img src="{{ asset('public/images/about_jci.png') }}" width="750px" height="550px"
+                        class="img-fluid" alt="" />
                 </div>
                 <div class="col-md-6 col-sm-6 px-0">
                     <div class="container-sm my-5 px-5">
@@ -277,7 +207,7 @@
                                 Program, which was adopted early this year as a National Program by JCI Philippines.
                             </p>
                             <div class="d-flex justify-content-end">
-                                <a href="about_us" class="btn btn-warning">Read more</a>
+                                <a href="{{ url('/about_us') }}" class="btn btn-warning">Read more</a>
                             </div>
                         </div>
                     </div>
@@ -287,7 +217,7 @@
     </section>
 
     <section class="container-fluid"
-        style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) ), url('images/paperbg.jpg')">
+        style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) ), url('{{ asset('public/images/paperbg.jpg') }}')">
         <div class="container">
             <div class="row mx-auto">
                 <h2 class=" my-4 text-light display-5">PROGRAMS</h2>
@@ -295,7 +225,7 @@
                     <div class="content">
                         <a href="#">
                             <div class="content-overlay"></div>
-                            <img src="./images/jci3.jpg"
+                            <img src="{{ asset('public/images/jci3.jpg') }}"
                                 class="content-image w-100 shadow-1-strong rounded mb-4 img-fluid"
                                 alt="Boat on Calm Water" />
                             <div class="content-details fadeIn-bottom">
@@ -307,7 +237,7 @@
                     <div class="content">
                         <a href="#">
                             <div class="content-overlay"></div>
-                            <img src="./images/event4.jpg"
+                            <img src="{{ asset('public/images/event4.jpg') }}"
                                 class="content-image w-100 shadow-1-strong rounded img-fluid"
                                 alt="Wintry Mountain Landscape" />
                             <div class="content-details fadeIn-bottom">
@@ -321,7 +251,7 @@
                     <div class="content">
                         <a href="#">
                             <div class="content-overlay"></div>
-                            <img src="./images/event2.jpg"
+                            <img src="{{ asset('public/images/event2.jpg') }}"
                                 class="content-image w-100 shadow-1-strong rounded mb-4 img-fluid"
                                 alt="Boat on Calm Water" />
                             <div class="content-details fadeIn-bottom">
@@ -333,7 +263,7 @@
                     <div class="content">
                         <a href="#">
                             <div class="content-overlay"></div>
-                            <img src="./images/event1.jpg"
+                            <img src="{{ asset('public/images/event1.jpg') }}"
                                 class="content-image w-100 shadow-1-strong rounded img-fluid"
                                 alt="Boat on Calm Water" />
                             <div class="content-details fadeIn-bottom">
@@ -347,7 +277,7 @@
                     <div class="content">
                         <a href="#">
                             <div class="content-overlay"></div>
-                            <img src="./images/jci2.jpg"
+                            <img src="{{ asset('public/images/jci2.jpg') }}"
                                 class="content-image w-100 shadow-1-strong rounded mb-4 img-fluid"
                                 alt="Boat on Calm Water" />
                             <div class="content-details fadeIn-bottom">
@@ -359,7 +289,7 @@
                     <div class="content">
                         <a href="#">
                             <div class="content-overlay"></div>
-                            <img src="./images/event5.jpg"
+                            <img src="{{ asset('public/images/event5.jpg') }}"
                                 class="content-image w-100 shadow-1-strong rounded img-fluid"
                                 alt="Boat on Calm Water" />
                             <div class="content-details fadeIn-bottom">
@@ -373,7 +303,8 @@
                     <div class="content">
                         <a href="#">
                             <div class="content-overlay"></div>
-                            <img src="./images/jci4.jpg" style="min-width:255px; min-height:173px;"
+                            <img src="{{ asset('public/images/jci4.jpg') }}"
+                                style="min-width:255px; min-height:173px;"
                                 class="content-image w-100 shadow-1-strong rounded mb-4 img-fluid"
                                 alt="Boat on Calm Water" />
                             <div class="content-details fadeIn-bottom">
@@ -385,7 +316,7 @@
                     <div class="content">
                         <a href="#">
                             <div class="content-overlay"></div>
-                            <img src="./images/jci6.webp"
+                            <img src="{{ asset('public/images/jci6.webp') }}"
                                 class="content-image w-100 shadow-1-strong rounded img-fluid"
                                 alt="Boat on Calm Water" />
                             <div class="content-details fadeIn-bottom">
@@ -397,11 +328,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{-- We Believe --}}
-    <section class="py-5"
-        style="background-image: url('./images/jcilogo.png'); background-repeat:no-repeat; background-size:contain; background-attachment: fixed; background-position: center;">
+    {{-- <section class="py-5"
+        style="background-image: url('{{ asset('public/images/jcilogo.png') }}'); background-repeat:no-repeat; background-size:contain; background-attachment: fixed; background-position: center;">
         <div class="container">
             <div>
                 <div class="row my-5">
@@ -444,26 +375,26 @@
                         </div>
                     </div>
                 </div>
-    </section>
+    </section> --}}
 
     <!-- Modal -->
-    <section>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+    {{-- <section>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
-                <div class="modal-content vh-100" style="background-image: url('./images/cglogobg.jpg');">
+                <div class="modal-content vh-100"
+                    style="background-image: url('{{ asset('public/images/cglogobg.jpg') }}');">
                     <div class="modal-body line grow">
-                        <img src="./images/cglogo2.png" class="pop-outin w-50 d-flex" style="margin:auto; alt="
-                            cglogo">
+                        <img src="{{ asset('public/images/cglogo2.png') }}" class="pop-outin w-50 d-flex"
+                            style="margin:auto; alt=" cglogo">
                         <section>
                             <div class="row text-center">
                                 <div class="col">
-                                    <a href="/login" style="color:white">
+                                    <a href="{{ url('/login') }}" style="color:white">
                                         <h4> Already a Click Green Warrior?<h4>
                                     </a>
                                 </div>
                                 <div class="col">
-                                    <a href="/member" style="color:white">
+                                    <a href="{{ url('/member') }}" style="color:white">
                                         <h4> Be a Click Green Warrior!</h4>
                                     </a>
                                 </div>
@@ -472,7 +403,7 @@
 
                         <!-- Know about click green -->
                         <section>
-                            <a href="./about" style="color:white" class="mt-5 text-center">
+                            <a href="{{ url('/about') }}" style="color:white" class="mt-5 text-center">
                                 <h4>Know more about Click Green!</h4>
                             </a>
                         </section>
@@ -483,49 +414,48 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
 
-    <section class="mt-5">
+    {{-- <section class="mt-5">
         <div class="container-fluid d-flex justify-content-center mb-3">
             <div class="gallery reveal fade-bottom">
-                <img src="./images/topyugocircle.png" alt="topyugo logo">
-                <img src="./images/smdccircle.png" alt="smdc logo">
-                <img src="./images/beautyvaultcircle.png" alt="beautyvault logo">
-                <img src="./images/advocatecircle.png" alt="advocate logo">
-                <img src="./images/glutacircle.png" alt="glutalipo logo">
-                <img src="./images/takarahotelcircle.png" alt="takara hotel logo">
-                <img src="./images/advocatecircle.png" alt="advocate logo">
+                <img src="{{ asset('public/images/smdccircle.png') }}" alt="smdc logo">
+                <img src="{{ asset('public/images/topyugocircle.png') }}" alt="topyugo logo">
+                <img src="{{ asset('public/images/beautyvaultcircle.png') }}" alt="beautyvault logo">
+                <img src="{{ asset('public/images/advocatecircle.png') }}" alt="advocate logo">
+                <img src="{{ asset('public/images/glutacircle.png') }}" alt="glutalipo logo">
+                <img src="{{ asset('public/images/takarahotelcircle.png') }}" alt="takara hotel logo">
+                <img src="{{ asset('public/images/advocatecircle.png') }}" alt="advocate logo">
             </div>
         </div>
         <div>
             <p class="demotext text-center mb-5" style="font-size:45px">Sponsorships</p>
         </div>
-        <section>
 
-        </section>
-        @include('components.Footer')
-        @include('components.Script')
+    </section> --}}
+    {{-- @include('components.Footer')
+    @include('components.Script')
 
-        <script>
-            function reveal() {
-                var reveals = document.querySelectorAll(".reveal");
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
 
-                for (var i = 0; i < reveals.length; i++) {
-                    var windowHeight = window.innerHeight;
-                    var elementTop = reveals[i].getBoundingClientRect().top;
-                    var elementVisible = 0;
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 0;
 
-                    if (elementTop < windowHeight - elementVisible) {
-                        reveals[i].classList.add("active");
-                    } else {
-                        reveals[i].classList.remove("active");
-                    }
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
                 }
             }
-            window.addEventListener("scroll", reveal);
-        </script>
+        }
+        window.addEventListener("scroll", reveal);
+    </script> --}}
 
 </body>
 
